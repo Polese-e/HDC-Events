@@ -8,4 +8,8 @@
     <p>O usuário está buscando por {{ $query }}</p>
 @endif
 <a href="/">Retornar ao Início</a>
+<<<<<<< HEAD
 @endsection 
+=======
+@endsection
+>>>>>>> origin/main
