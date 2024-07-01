@@ -10,7 +10,3 @@ Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/contatos', [ContactController::class, 'index']);
-
-Route::get('/produtos', [ProductController::class, 'index']);
-
-Route::get('/produto_teste/{id?}', [ProductController::class, 'test']);
