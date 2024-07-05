@@ -102,11 +102,11 @@
   }
 
   #events-container .card {
-    flex: 1 1 0;
+    flex: 1 1 20%;
     max-width: 25%;
     border-radius: 10px;
     padding: 0;
-    margin: 5px;
+    margin: .5px;
   }
 
   #events-container img {
