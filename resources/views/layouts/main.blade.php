@@ -35,10 +35,10 @@
                         <a href="/dashboard" class="nav-link">Meus Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <form id="logout-form" action="/logout" method="POST" style="display: none;">
+                        <form action="/logout" method="post" id="logout-form">
                             @csrf
+                            <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
                         </form>
-                        <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
                     </li>
                     @endauth
                     @guest
@@ -47,9 +47,8 @@
                     </li>
                     <li class="nav-item">
                         <a href="/register" class="nav-link">Cadastrar</a>
-                    </li>
+                    </ul>
                     @endguest
-                </ul>
             </div>
         </nav>
     </header>
@@ -62,7 +61,7 @@
         </div>
     </div>
     <footer>
-        <p>Made by Polese ☕</p>
+        <p>Feito por Polese ☕</p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
