@@ -20,13 +20,19 @@
                 <td>{{ $loop->index + 1 }}</td>
                 <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                 <td>0</td>
-                <td><a href="#">Editar</a> <a href="#">Delete</a></td>
+                <td>
+                    <a href="#" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a>
+                    <form action="/events/{{ $event->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger delete-btn">Delete</button>
+                    </form>
+                </td>
             </tbody>
         @endforeach
     </table>
 </div>
 @else
-    <p>Você não tem eventos, <a href="/events/create">criar evento.</a></p>
+    <p>Você não tem eventos | <a href="/events/create">CRIAR EVENTO.</a></p>
 @endif
-
 @endsection

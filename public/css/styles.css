@@ -216,6 +216,10 @@
     margin-bottom: 30px;
   }
 
+  .dashboard-events-container form {
+    display: inline-block;
+  }
+
   /* Footer */
   footer {
     text-align: center;
