@@ -10,8 +10,13 @@ class Event extends Model
     use HasFactory;
 
     protected $casts = [
-        'items' => 'array'
+        'date' => 'datetime:Y-m-d',
+        'items' => 'array',
     ];
+
+    protected $guarded = [];
+
+    protected $dates = ['date'];
 
     public function user() {
         return $this->belongsTo(User::class);

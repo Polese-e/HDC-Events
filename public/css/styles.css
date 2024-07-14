@@ -220,6 +220,13 @@
     display: inline-block;
   }
 
+  /* Edit Page */
+
+  .preview-img {
+    width: 100px;
+    margin-left: 80px;
+  }
+
   /* Footer */
   footer {
     text-align: center;
