@@ -5,6 +5,8 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Event;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
@@ -63,7 +65,13 @@ class User extends Authenticatable
         ];
     }
 
-    public function events() {
+    public function events()
+    {
         return $this->hasMany(Event::class);
+    }
+
+    public function eventsAsParticipant()
+    {
+        return $this->belongsToMany(Event::class);
     }
 }

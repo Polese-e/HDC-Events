@@ -98,4 +98,13 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg','Evento deletado com sucesso!');
     }
+
+    public function joinEvent($id)
+    {
+        $user = auth()->user();
+        $user->eventsAsParticipant()->attach($id);
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg','Entrou no evento ' . $event->title . 'com sucesso!');
+    }
 }
