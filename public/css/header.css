@@ -1,0 +1,20 @@
+.navbar {
+    height: 115px;
+}
+
+#navbar {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#navbar > a > img {
+    width: 70px;
+}
+
+#navbar > ul > li > a {
+    font-size: 18px;
+}
+
+#navbar > ul > li > form > a {
+    font-size: 18px;
+}

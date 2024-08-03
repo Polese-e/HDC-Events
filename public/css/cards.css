@@ -1,0 +1,22 @@
+#cards-container {
+    display: flex;
+}
+
+#events-container .card {
+    width: 281px;
+    border-radius: 10px;
+}
+
+#events-container img {
+    max-height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#title-events{
+    border-bottom: 1px solid black;
+}
+
+#title-events h2{
+    color: #F2A340;
+}

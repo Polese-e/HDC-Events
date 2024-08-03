@@ -12,14 +12,16 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     {{-- CSS da aplicação --}}
     <link rel="stylesheet" href="{{ asset('css\styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css\header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css\cards.css') }}">
     {{-- JS da aplicação --}}
     <script src="js\app.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbar">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top p-0">
+            <div class="d-flex align-items-center col-10 mx-auto bg-light" id="navbar">
                 <a href="/" class="navbar-brand">
                     <img src="/img/hdcevents_logo.svg" alt="HDC Events">
                 </a>

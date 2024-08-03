@@ -10,16 +10,17 @@
             <input type="text" id="search" name="search" class="form-control" placeholder="Procurar">
         </form>
     </div>
-    <div id="events-container" class="col-md-12">
+    <div id="events-container" class="col-10 mx-auto">
+        <div id="title-events" class="m-2">
         @if ($search)
             <h2>Procurando por: {{ $search }}</h2>
         @else
-            <h2>Próximos Eventos</h2>
+            <h2 class="mb-2"><strong>Lançamentos</strong></h2>
         @endif
-        <p class="subtitle">Veja os eventos dos próximos dias</p>
-        <div id="cards-container" class="row">
+        </div>
+        <div id="cards-container" class="row mx-auto">
             @foreach ($events as $event)
-                <div class="card col-md-3">
+                <div class="card col-md-3 m-2 p-0 py-1">
                     <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                     <div class="card-body">
                         <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
